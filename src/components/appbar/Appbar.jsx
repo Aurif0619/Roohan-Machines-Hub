@@ -15,11 +15,12 @@ const navItems = ['Machines', 'Aftersales Services', "Let's Talk Aesthetics", 'A
 const navPaths = {
   'Machines': '/machines',
   'Aftersales Services': '/aftersales',
-  "Let's Talk Aesthetics": '/aesthetics',
+  "Let's Talk Aesthetics": '/aesthetic',
   'About Us': '/about',
   'Client Gallery': '/gallery',
   'Blog': '/blog',
 };
+
 
 function Appbar(props) {
   const { window } = props;
@@ -63,20 +64,16 @@ function Appbar(props) {
               onClick={() => handleNavClick(item)}
               sx={{
                 textTransform: 'none',
-                fontWeight: 600,
-                fontSize: '1rem',
+                fontWeight: 600, fontSize: '1rem',
                 background: 'linear-gradient(90deg, #ff512f, #dd2476)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 transition: 'all 0.3s ease-in-out',
                 position: 'relative',
                 '&::after': {
-                  content: '""',
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  width: 0,
-                  height: '2px',
+                  content: '""', position: 'absolute',
+                  bottom: 0, left: 0,
+                  width: 0, height: '2px',
                   backgroundColor: '#dd2476',
                   transition: 'width 0.3s ease',
                 },

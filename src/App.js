@@ -3,11 +3,12 @@ import Appbar from './components/appbar/Appbar';
 import Home from './components/home/Home';
 import Machines from './components/machines/Machines';
 import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
+  createBrowserRouter, RouterProvider, Outlet,
 } from 'react-router-dom';
 import AfterSales from './components/aftersales/AfterSales';
+import Aesthetic from './components/aesthetic/Aesthetic';
+import About from './components/about/About';
+import Blog from './components/blog/Blog';
 
 function Layout() {
   return (
@@ -33,6 +34,18 @@ const router = createBrowserRouter([
       {
         path: '/AfterSales',
         element: <AfterSales />,
+      },
+      {
+        path: '/Aesthetic',
+        element: <Aesthetic />,
+      },
+      {
+        path: '/About',
+        element: <About />,
+      },
+       {
+        path: '/Blog',
+        element: <Blog />,
       },
     ],
   },

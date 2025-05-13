@@ -258,9 +258,7 @@ const Machines = () => {
                                         '&:hover': {
                                             borderColor: '#e4b946',
                                             color: '#e4b946'
-                                        }
-                                    }}
-                                >
+                                        }}}>
                                     Get in Touch
                                 </Button>
                             </CardContent>
@@ -280,6 +278,8 @@ const Machines = () => {
                                 <IconButton key={i} sx={{ color: '#f2f2f2', '&:hover': { color: '#c59d33' } }}>{icon}</IconButton>
                             ))}
                         </Box>
+                        <Typography marginTop={3} sx={{ color: '#c59d33' }}>+92 333 4215964</Typography>
+                        <Typography marginTop={2} sx={{ color: '#c59d33' }}>+92 321 8514176</Typography>
                     </Box>
 
                     <Box display="flex" flexDirection="column" gap={1}>
@@ -307,7 +307,7 @@ const Machines = () => {
                 </Box>
             </Container>
 
-            <Typography variant="h6" align="center" mt={6} sx={{ opacity: 0.7 }}>
+            <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33' }}>
                 © 2023 Roohan Traders. All rights reserved.
             </Typography>
             <Modal open={open}

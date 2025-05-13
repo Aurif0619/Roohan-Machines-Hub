@@ -39,7 +39,7 @@ const AfterSales = () => {
                     At Roohan Traders we own up to our machines, making sure our resident engineers are there to guide our doctors on the machines if they need.
                 </Typography>
                 <Typography variant="body1" sx={{ textAlign: 'center', mb: 5 }}>
-                    Service of laser machines, repairing of laser machines, and maintenance of your Tayyab Traders bought laser machines, all just a simple call away.
+                    Service of laser machines, repairing of laser machines, and maintenance of your Roohan Traders bought laser machines, all just a simple call away.
                 </Typography>
 
                 <Typography variant="h4" sx={{ textAlign: 'center', mb: 3, color: '#c59d33' }}>
@@ -95,9 +95,9 @@ const AfterSales = () => {
 
                                 <Typography
                                     sx={{
-                                        mt: 1,  textTransform: 'none',
+                                        mt: 1, textTransform: 'none',
                                         fontWeight: 600,
-                                        fontSize: '1rem',  background: 'linear-gradient(90deg,rgb(255, 153, 0),rgb(13, 245, 5))',
+                                        fontSize: '1rem', background: 'linear-gradient(90deg,rgb(255, 153, 0),rgb(13, 245, 5))',
                                         WebkitBackgroundClip: 'text',
                                         WebkitTextFillColor: 'transparent',
                                         transition: 'all 0.3s ease-in-out',
@@ -138,11 +138,13 @@ const AfterSales = () => {
                                 <IconButton key={i} sx={{ color: '#f2f2f2', '&:hover': { color: '#c59d33' } }}>{icon}</IconButton>
                             ))}
                         </Box>
+                        <Typography marginTop={3} sx={{ color: '#c59d33' }}>+92 333 4215964</Typography>
+                        <Typography marginTop={2} sx={{ color: '#c59d33' }}>+92 321 8514176</Typography>
                     </Box>
 
                     <Box display="flex" flexDirection="column" gap={1}>
                         {links.map((label, index) => (
-                            <Button key={index} sx={{ color: '#c59d33', fontSize: '15px', fontWeight: 'bold', textTransform: 'none', '&:hover': { color: '#c59d33' } }}>
+                            <Button key={index} sx={{ color: '#c59d33', fontSize: '17px', fontWeight: 'bold', textTransform: 'none', '&:hover': { color: '#c59d33' } }}>
                                 {label}
                             </Button>
                         ))}
@@ -165,7 +167,7 @@ const AfterSales = () => {
                 </Box>
             </Container>
 
-            <Typography variant="h6" align="center" mt={6} sx={{ opacity: 0.7 }}>
+            <Typography variant="h6" align="center" mt={6} sx={{color: '#c59d33', }}>
                 © 2023 Roohan Traders. All rights reserved.
             </Typography>
         </Box>
