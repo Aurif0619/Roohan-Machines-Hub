@@ -2,13 +2,13 @@ import React from 'react';
 import Appbar from './components/appbar/Appbar';
 import Home from './components/home/Home';
 import Machines from './components/machines/Machines';
-import {
-  createBrowserRouter, RouterProvider, Outlet,
+import { createBrowserRouter, RouterProvider, Outlet,
 } from 'react-router-dom';
 import AfterSales from './components/aftersales/AfterSales';
 import Aesthetic from './components/aesthetic/Aesthetic';
 import About from './components/about/About';
 import Blog from './components/blog/Blog';
+import Gallery from './components/gallery/Gallery';
 
 function Layout() {
   return (
@@ -46,6 +46,11 @@ const router = createBrowserRouter([
        {
         path: '/Blog',
         element: <Blog />,
+      },
+      ,
+       {
+        path: '/Gallery',
+        element: <Gallery/>,
       },
     ],
   },

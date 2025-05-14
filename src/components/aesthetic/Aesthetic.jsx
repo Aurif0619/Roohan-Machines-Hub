@@ -119,7 +119,7 @@ const Aesthetic = () => {
                     </Box>
                 </Container>
 
-                <Typography variant="h6" align="center" mt={6} sx={{color: '#c59d33', }}>
+                <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33', }}>
                     © 2023 Roohan Traders. All rights reserved.
                 </Typography>
             </Box >
