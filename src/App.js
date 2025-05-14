@@ -8,8 +8,7 @@ import AfterSales from './components/aftersales/AfterSales';
 import Aesthetic from './components/aesthetic/Aesthetic';
 import About from './components/about/About';
 import Blog from './components/blog/Blog';
-import Gallery from './components/gallery/Gallery';
-
+import Gallery from './components/gallery/Gallery'
 function Layout() {
   return (
     <>

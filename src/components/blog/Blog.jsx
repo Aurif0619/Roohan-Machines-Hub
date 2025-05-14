@@ -63,7 +63,8 @@ This machine essentially uses 1064nm laser to target the hair follicle. Often in
                 background: '#1c1c1c',
                 color: '#fff',
                 borderRadius: '20px',
-                mb: 4, border: `3px solid ${blog.borderColor}`,
+                mb: 4,
+                border: `3px solid ${blog.borderColor}`,
                 boxShadow: `0 0 20px ${blog.borderColor}`,
                 transition: '0.3s ease-in-out',
                 '&:hover': {
@@ -102,73 +103,47 @@ This machine essentially uses 1064nm laser to target the hair follicle. Often in
           ))}
         </Container>
 
-        {/* Footer Section */}
-        <Container sx={{ mt: 5 }}>
-          <Box
-            display="flex"
-            flexDirection={{ xs: 'column', md: 'row' }}
-            justifyContent="space-between"
-            alignItems="center"
-            gap={4}>
-            {/* Logo & Social */}
+        {/* Footer */}
+        <hr style={{ margin: '40px 0', borderColor: '#333' }} />
+        <Container>
+          <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} justifyContent="space-between" alignItems="center" gap={4}>
             <Box textAlign="center">
-              <img width={80} src={logo} alt="logo"
-                style={{ borderRadius: '50%', cursor: 'pointer' }}
-              />
+              <img width={80} src={logo} alt="logo" style={{ borderRadius: '50%', cursor: 'pointer' }} />
               <Box mt={2} display="flex" justifyContent="center" gap={2}>
-                {[<FacebookIcon sx={{ color: '#c59d33' }} />, <InstagramIcon sx={{ color: '#c59d33' }} />, <LinkedInIcon />].map((icon, i) => (
-                  <IconButton
-                    key={i} sx={{ color: '#c59d33', '&:hover': { color: '#fff' } }}>
-                    {icon}
-                  </IconButton>
-                ))}
+                <IconButton sx={{ color: '#3b5998' }}><FacebookIcon /></IconButton>
+                <IconButton sx={{ color: '#E1306C' }}><InstagramIcon /></IconButton>
+                <IconButton sx={{ color: '#0077B5' }}><LinkedInIcon /></IconButton>
               </Box>
-              <Typography mt={3} sx={{ color: '#c59d33' }}>
-                +92 333 4215964
-              </Typography>
-              <Typography mt={1} sx={{ color: '#c59d33' }}>
-                +92 321 8514176
-              </Typography>
+              <Typography marginTop={3} sx={{ color: '#c59d33' }}>+92 333 4215964</Typography>
+              <Typography marginTop={2} sx={{ color: '#c59d33' }}>+92 321 8514176</Typography>
             </Box>
 
-            {/* Links */}
-            <Box display="flex" flexDirection="column" alignItems="center" gap={1}>
+            <Box display="flex" flexDirection="column" gap={1}>
               {links.map((label, index) => (
-                <Button
-                  key={index}
-                  sx={{
-                    color: '#c59d33', fontSize: '16px',
-                    textTransform: 'none', '&:hover': { color: '#fff' },
-                  }}>
+                <Button key={index} sx={{ color: '#c59d33', fontSize: '17px', fontWeight: 'bold', textTransform: 'none', '&:hover': { color: '#c59d33' } }}>
                   {label}
                 </Button>
               ))}
             </Box>
 
-            {/* Contact CTA */}
             <Box>
-              <Button
-                variant="contained"
+              <Button variant="contained"
                 sx={{
-                  background: 'linear-gradient(135deg, rgb(243, 14, 63), rgb(6, 30, 243))',
-                  color: '#fff',
+                  background: 'linear-gradient(135deg,rgb(243, 14, 63),rgb(6, 30, 243))',
+                  color: '#000',
                   textTransform: 'none',
-                  borderRadius: '999px',
-                  py: 1,
-                  px: 5,
+                  borderRadius: '999px', py: 1, px: 5,
                   fontWeight: 'bold',
-                  '&:hover': { backgroundColor: '#e4b946', color: '#000' },
+                  '&:hover': { backgroundColor: '#e4b946' }
                 }}
-                endIcon={<span style={{ fontWeight: 'bold' }}>↗</span>}
-              >
+                endIcon={<span style={{ fontWeight: 'bold' }}>↗</span>}>
                 Get in Touch
               </Button>
             </Box>
           </Box>
         </Container>
 
-        {/* Footer Bottom */}
-        <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33' }}>
+        <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33', }}>
           © 2023 Roohan Traders. All rights reserved.
         </Typography>
       </Box>

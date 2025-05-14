@@ -126,17 +126,16 @@ const AfterSales = () => {
 
             </Container>
 
-            <hr style={{ margin: '40px 0', borderColor: '#333' }} />
-
             {/* Footer */}
+            <hr style={{ margin: '40px 0', borderColor: '#333' }} />
             <Container>
                 <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} justifyContent="space-between" alignItems="center" gap={4}>
                     <Box textAlign="center">
                         <img width={80} src={logo} alt="logo" style={{ borderRadius: '50%', cursor: 'pointer' }} />
                         <Box mt={2} display="flex" justifyContent="center" gap={2}>
-                            {[<FacebookIcon sx={{ color: '#c59d33' }} />, <InstagramIcon sx={{ color: '#c59d33' }} />, <LinkedInIcon sx={{ color: '#c59d33' }} />].map((icon, i) => (
-                                <IconButton key={i} sx={{ color: '#f2f2f2', '&:hover': { color: '#c59d33' } }}>{icon}</IconButton>
-                            ))}
+                            <IconButton sx={{ color: '#3b5998' }}><FacebookIcon /></IconButton>
+                            <IconButton sx={{ color: '#E1306C' }}><InstagramIcon /></IconButton>
+                            <IconButton sx={{ color: '#0077B5' }}><LinkedInIcon /></IconButton>
                         </Box>
                         <Typography marginTop={3} sx={{ color: '#c59d33' }}>+92 333 4215964</Typography>
                         <Typography marginTop={2} sx={{ color: '#c59d33' }}>+92 321 8514176</Typography>
@@ -167,7 +166,7 @@ const AfterSales = () => {
                 </Box>
             </Container>
 
-            <Typography variant="h6" align="center" mt={6} sx={{color: '#c59d33', }}>
+            <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33', }}>
                 © 2023 Roohan Traders. All rights reserved.
             </Typography>
         </Box>
