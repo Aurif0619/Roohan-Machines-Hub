@@ -1,6 +1,5 @@
 import { Box, Button, Card, CardContent, CardMedia, Container, Grid, IconButton, Modal, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Roohan from '../assets/Muhammad Tayyab.png';
 import Zarfisha from '../assets/Zarfishar Tayyab.png';
 import logo from '../assets/logo.jpg';
@@ -41,149 +40,165 @@ const About = () => {
         setSelectedMember(null);
     };
 
-    const links = ["Quick Links", "Machines", "Aftersales Services", "Let's Talk Aesthetics", "About Us", "Client Gallery", "Blog"];
-
+    const links = [
+        { label: "Quick Links", path: '/' },
+        { label: "Machines", path: '/machines' },
+        { label: "Aftersales Services", path: '/aftersales' },
+        { label: "Let's Talk Aesthetics", path: '/aesthetics' },
+        { label: "About Us", path: '/about' },
+        { label: "Client Gallery", path: '/gallery' },
+        { label: "Blog", path: '/blog' }
+    ];
     return (
-        <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
-            <Typography variant="h3" sx={{ textAlign: 'center', mb: 5, color: '#c59d33' }}>
-                GET TO KNOW US!
-            </Typography>
-            <Grid container spacing={4} justifyContent="center">
-                {teamMembers.map((member, idx) => (
-                    <Grid item xs={12} md={6} key={idx}>
-                        <Card
-                            sx={{
-                                textAlign: 'center',
-                                boxShadow: 6, borderRadius: 3,
-                                transition: 'transform 0.3s ease',
-                                '&:hover': {
-                                    transform: 'translateY(-10px)',
-                                    boxShadow: 12,
-                                },
-                            }}
-                        >
-                            <CardMedia
-                                component="img"
-                                height="300"
-                                image={member.image}
-                                alt={member.name}
+        <>
+            <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
+                <Typography variant="h3" sx={{ textAlign: 'center', mb: 5, color: '#c59d33' }}>
+                    GET TO KNOW US!
+                </Typography>
+                <Grid container spacing={4} justifyContent="center">
+                    {teamMembers.map((member, idx) => (
+                        <Grid item xs={12} md={6} key={idx}>
+                            <Card
                                 sx={{
-                                    objectFit: 'cover',
-                                    objectPosition: 'top',
-                                    imageRendering: 'auto',
-                                    width: '100%',
-                                    '@media (min-width:900px)': {
-                                        height: '350px',
+                                    textAlign: 'center',
+                                    boxShadow: 6, borderRadius: 3,
+                                    transition: 'transform 0.3s ease',
+                                    '&:hover': {
+                                        transform: 'translateY(-10px)',
+                                        boxShadow: 12,
                                     },
                                 }}
-                            />
-
-                            <CardContent>
-                                <Typography variant="h6" sx={{ color: '#c59d33', fontWeight: 'bold' }}>
-                                    - {member.role} -
-                                </Typography>
-                                <Typography variant="h5" fontWeight="bold" gutterBottom>
-                                    {member.name}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {member.shortDesc}
-                                </Typography>
-                                <Button
-                                    onClick={() => handleOpen(member)}
-                                    variant="outlined"
-                                    sx={{ mt: 2, color: '#c59d33', borderColor: '#c59d33' }}
-                                >
-                                    Read More
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
-
-            {/* Modal */}
-            <Modal open={open} onClose={handleClose}>
-                <Box
-                    sx={{
-                        maxWidth: 600,
-                        maxHeight: '90vh', overflowY: 'auto',
-                        bgcolor: 'background.paper',
-                        boxShadow: 24, p: 4,
-                        mx: 'auto', my: 6, borderRadius: 2,
-                        outline: 'none',
-                    }} >
-                    {selectedMember && (
-                        <>
-                            <Typography
-                                variant="h6"
-                                sx={{ color: '#c59d33', fontWeight: 'bold', textAlign: 'center' }}
                             >
-                                - {selectedMember.role} -
-                            </Typography>
-                            <Typography variant="h5" fontWeight="bold" textAlign="center" gutterBottom>
-                                {selectedMember.name}
-                            </Typography>
-                            <Typography variant="body1" textAlign="justify">
-                                {selectedMember.fullMessage}
-                            </Typography>
-                            <Typography sx={{ color: '#c59d33', mt: 3, textAlign: 'right' }}>
-                                {selectedMember.name} <br />
-                                {selectedMember.position}
-                            </Typography>
-                            <Box textAlign="center" mt={3}>
-                                <Button onClick={handleClose} variant="contained" sx={{ bgcolor: '#c59d33' }}>
-                                    Close
-                                </Button>
+                                <CardMedia
+                                    component="img"
+                                    height="300"
+                                    image={member.image}
+                                    alt={member.name}
+                                    sx={{
+                                        objectFit: 'cover',
+                                        objectPosition: 'top',
+                                        imageRendering: 'auto',
+                                        width: '100%',
+                                        '@media (min-width:900px)': {
+                                            height: '350px',
+                                        },
+                                    }}
+                                />
+
+                                <CardContent>
+                                    <Typography variant="h6" sx={{ color: '#c59d33', fontWeight: 'bold' }}>
+                                        - {member.role} -
+                                    </Typography>
+                                    <Typography variant="h5" fontWeight="bold" gutterBottom>
+                                        {member.name}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {member.shortDesc}
+                                    </Typography>
+                                    <Button
+                                        onClick={() => handleOpen(member)}
+                                        variant="outlined"
+                                        sx={{ mt: 2, color: '#c59d33', borderColor: '#c59d33' }}
+                                    >
+                                        Read More
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+
+                {/* Modal */}
+                <Modal open={open} onClose={handleClose}>
+                    <Box
+                        sx={{
+                            maxWidth: 600,
+                            maxHeight: '90vh', overflowY: 'auto',
+                            bgcolor: 'background.paper',
+                            boxShadow: 24, p: 4,
+                            mx: 'auto', my: 6, borderRadius: 2,
+                            outline: 'none',
+                        }} >
+                        {selectedMember && (
+                            <>
+                                <Typography
+                                    variant="h6"
+                                    sx={{ color: '#c59d33', fontWeight: 'bold', textAlign: 'center' }}>
+                                    - {selectedMember.role} -
+                                </Typography>
+                                <Typography variant="h5" fontWeight="bold" textAlign="center" gutterBottom>
+                                    {selectedMember.name}
+                                </Typography>
+                                <Typography variant="body1" textAlign="justify">
+                                    {selectedMember.fullMessage}
+                                </Typography>
+                                <Typography sx={{ color: '#c59d33', mt: 3, textAlign: 'right' }}>
+                                    {selectedMember.name} <br />
+                                    {selectedMember.position}
+                                </Typography>
+                                <Box textAlign="center" mt={3}>
+                                    <Button onClick={handleClose} variant="contained" sx={{ bgcolor: '#c59d33' }}>
+                                        Close
+                                    </Button>
+                                </Box>
+                            </>
+                        )}
+                    </Box>
+                </Modal>
+
+                {/* Footer */}
+                <hr style={{ margin: '40px 0', borderColor: '#333' }} />
+                <Container>
+                    <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} justifyContent="space-between" alignItems="center" gap={4}>
+                        <Box textAlign="center">
+                            <img width={80} src={logo} alt="logo" style={{ borderRadius: '50%', cursor: 'pointer' }} />
+                            <Box mt={2} display="flex" justifyContent="center" gap={2}>
+                                <IconButton sx={{ color: '#3b5998' }}><FacebookIcon /></IconButton>
+                                <IconButton sx={{ color: '#E1306C' }}><InstagramIcon /></IconButton>
+                                <IconButton sx={{ color: '#0077B5' }}><LinkedInIcon /></IconButton>
                             </Box>
-                        </>
-                    )}
-                </Box>
-            </Modal>
-
-            {/* Footer */}
-            <hr style={{ margin: '40px 0', borderColor: '#333' }} />
-            <Container>
-                <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} justifyContent="space-between" alignItems="center" gap={4}>
-                    <Box textAlign="center">
-                        <img width={80} src={logo} alt="logo" style={{ borderRadius: '50%', cursor: 'pointer' }} />
-                        <Box mt={2} display="flex" justifyContent="center" gap={2}>
-                            <IconButton sx={{ color: '#3b5998' }}><FacebookIcon /></IconButton>
-                            <IconButton sx={{ color: '#E1306C' }}><InstagramIcon /></IconButton>
-                            <IconButton sx={{ color: '#0077B5' }}><LinkedInIcon /></IconButton>
+                            <Typography marginTop={3} sx={{ color: '#c59d33' }}>+92 333 4215964</Typography>
+                            <Typography marginTop={2} sx={{ color: '#c59d33' }}>+92 321 8514176</Typography>
                         </Box>
-                        <Typography marginTop={3} sx={{ color: '#c59d33' }}>+92 333 4215964</Typography>
-                        <Typography marginTop={2} sx={{ color: '#c59d33' }}>+92 321 8514176</Typography>
-                    </Box>
 
-                    <Box display="flex" flexDirection="column" gap={1}>
-                        {links.map((label, index) => (
-                            <Button key={index} sx={{ color: '#c59d33', fontSize: '17px', fontWeight: 'bold', textTransform: 'none', '&:hover': { color: '#c59d33' } }}>
-                                {label}
+                        <Box display="flex" flexDirection="column" gap={1}>
+                            {links.map((link, index) => (
+                                <Button
+                                    key={index}
+                                    href={link.path}
+                                    sx={{
+                                        color: '#c59d33',
+                                        fontSize: '17px', fontWeight: 'bold',
+                                        textTransform: 'none',
+                                        '&:hover': { color: '#c59d33' }
+                                    }}>
+                                    {link.label}
+                                </Button>
+                            ))}
+                        </Box>
+
+                        <Box>
+                            <Button variant="contained"
+                                sx={{
+                                    background: 'linear-gradient(135deg,rgb(243, 14, 63),rgb(6, 30, 243))',
+                                    color: '#000',
+                                    textTransform: 'none',
+                                    borderRadius: '999px', py: 1, px: 5,
+                                    fontWeight: 'bold',
+                                    '&:hover': { backgroundColor: '#e4b946' }
+                                }}
+                                endIcon={<span style={{ fontWeight: 'bold' }}>↗</span>}>
+                                Get in Touch
                             </Button>
-                        ))}
+                        </Box>
                     </Box>
+                </Container>
 
-                    <Box>
-                        <Button variant="contained"
-                            sx={{
-                                background: 'linear-gradient(135deg,rgb(243, 14, 63),rgb(6, 30, 243))',
-                                color: '#000',
-                                textTransform: 'none',
-                                borderRadius: '999px', py: 1, px: 5,
-                                fontWeight: 'bold',
-                                '&:hover': { backgroundColor: '#e4b946' }
-                            }}
-                            endIcon={<span style={{ fontWeight: 'bold' }}>↗</span>}>
-                            Get in Touch
-                        </Button>
-                    </Box>
-                </Box>
-            </Container>
-
-            <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33', }}>
-                © 2023 Roohan Traders. All rights reserved.
-            </Typography>
-        </Box>
+                <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33', }}>
+                    © 2023 Roohan Traders. All rights reserved.
+                </Typography>
+            </Box>
+        </>
     );
 };
 

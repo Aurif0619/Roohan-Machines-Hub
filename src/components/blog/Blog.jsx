@@ -44,8 +44,15 @@ This machine essentially uses 1064nm laser to target the hair follicle. Often in
     },
   ];
 
-  const links = ["Quick Links", "Machines", "Aftersales Services", "Let's Talk Aesthetics", "About Us", "Client Gallery", "Blog"];
-
+  const links = [
+    { label: "Quick Links", path: '/' },
+    { label: "Machines", path: '/machines' },
+    { label: "Aftersales Services", path: '/aftersales' },
+    { label: "Let's Talk Aesthetics", path: '/aesthetics' },
+    { label: "About Us", path: '/about' },
+    { label: "Client Gallery", path: '/gallery' },
+    { label: "Blog", path: '/blog' }
+  ];
   return (
     <>
       <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
@@ -119,9 +126,17 @@ This machine essentially uses 1064nm laser to target the hair follicle. Often in
             </Box>
 
             <Box display="flex" flexDirection="column" gap={1}>
-              {links.map((label, index) => (
-                <Button key={index} sx={{ color: '#c59d33', fontSize: '17px', fontWeight: 'bold', textTransform: 'none', '&:hover': { color: '#c59d33' } }}>
-                  {label}
+              {links.map((link, index) => (
+                <Button
+                  key={index}
+                  href={link.path}
+                  sx={{
+                    color: '#c59d33',
+                    fontSize: '17px', fontWeight: 'bold',
+                    textTransform: 'none',
+                    '&:hover': { color: '#c59d33' }
+                  }}>
+                  {link.label}
                 </Button>
               ))}
             </Box>

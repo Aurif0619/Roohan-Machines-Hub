@@ -9,7 +9,6 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
-
 const navItems = ['Machines', 'Aftersales Services', "Let's Talk Aesthetics", 'About Us', 'Client Gallery', 'Blog'];
 
 const navPaths = {

@@ -9,8 +9,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Aesthetic = () => {
 
-    const links = ["Quick Links", "Machines", "Aftersales Services", "Let's Talk Aesthetics", "About Us", "Client Gallery", "Blog"];
-
+    const links = [
+        { label: "Quick Links", path: '/' },
+        { label: "Machines", path: '/machines' },
+        { label: "Aftersales Services", path: '/aftersales' },
+        { label: "Let's Talk Aesthetics", path: '/aesthetics' },
+        { label: "About Us", path: '/about' },
+        { label: "Client Gallery", path: '/gallery' },
+        { label: "Blog", path: '/blog' }
+    ];
     return (
         <>
             <Box sx={{ backgroundColor: '#727272', color: '#fff', py: 5 }}>
@@ -78,11 +85,10 @@ const Aesthetic = () => {
                         </Grid>
                     </Grid>
                 </Box>
-
-                {/* Footer */}
-                <hr style={{ margin: '40px 0', borderColor: '#333' }} />
+            </Box>
+            <Box sx={{ backgroundColor: '#000', color: '#fff' }}>
                 <Container>
-                    <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} justifyContent="space-between" alignItems="center" gap={4}>
+                    <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} paddingTop={3} justifyContent="space-between" alignItems="center" gap={4}>
                         <Box textAlign="center">
                             <img width={80} src={logo} alt="logo" style={{ borderRadius: '50%', cursor: 'pointer' }} />
                             <Box mt={2} display="flex" justifyContent="center" gap={2}>
@@ -95,9 +101,17 @@ const Aesthetic = () => {
                         </Box>
 
                         <Box display="flex" flexDirection="column" gap={1}>
-                            {links.map((label, index) => (
-                                <Button key={index} sx={{ color: '#c59d33', fontSize: '17px', fontWeight: 'bold', textTransform: 'none', '&:hover': { color: '#c59d33' } }}>
-                                    {label}
+                            {links.map((link, index) => (
+                                <Button
+                                    key={index}
+                                    href={link.path}
+                                    sx={{
+                                        color: '#c59d33',
+                                        fontSize: '17px', fontWeight: 'bold',
+                                        textTransform: 'none',
+                                        '&:hover': { color: '#c59d33' }
+                                    }}>
+                                    {link.label}
                                 </Button>
                             ))}
                         </Box>
@@ -119,10 +133,11 @@ const Aesthetic = () => {
                     </Box>
                 </Container>
 
-                <Typography variant="h6" align="center" mt={6} sx={{ color: '#c59d33', }}>
+                <Typography variant="h6" align="center" mt={6} paddingBottom={3} sx={{ color: '#c59d33', }}>
                     © 2023 Roohan Traders. All rights reserved.
                 </Typography>
             </Box >
+
         </>
     )
 }

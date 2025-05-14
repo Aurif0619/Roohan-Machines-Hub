@@ -11,8 +11,20 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Home = () => {
-  const links = ["Quick Links", "Machines", "Aftersales Services", "Let's Talk Aesthetics", "About Us", "Client Gallery", "Blog"];
-
+  const links = [
+    { label: "Quick Links", path: '/' },
+    { label: "Machines", path: '/machines' },
+    { label: "Aftersales Services", path: '/aftersales' },
+    { label: "Let's Talk Aesthetics", path: '/aesthetics' },
+    { label: "About Us", path: '/about' },
+    { label: "Client Gallery", path: '/gallery' },
+    { label: "Blog", path: '/blog' }
+  ];
+  const buttons = [
+    { label: "Machines", path: "/machines" },
+    { label: "Aftersale Services", path: "/aftersales" },
+    { label: "Let's Talk Aesthetic", path: "/aesthetic" }
+  ];
   return (
     <>
       <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
@@ -20,19 +32,20 @@ const Home = () => {
           <Typography variant="h5" align="center" fontWeight="bold" marginTop={2}>
             Looking for an aesthetic laser machine or energy device for your skin clinic, aesthetic center, spa or salon? Just keep scrolling
           </Typography>
-
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
             spacing={2}
             justifyContent="center"
             alignItems="center"
-            mt={3}>
-            {["Machines", "Aftersale Services", "Let's Talk Aesthetic"].map((text, idx) => (
-              <Button key={idx}
+            mt={3} >
+            {buttons.map((btn, idx) => (
+              <Button
+                key={idx}
                 variant="contained"
-                fullWidth sx={{
-                  py: 1.2,
-                  textTransform: 'none',
+                fullWidth
+                href={btn.path}
+                sx={{
+                  py: 1.2, textTransform: 'none',
                   background: 'linear-gradient(135deg,rgb(243, 14, 63),rgb(6, 30, 243))',
                   color: '#000',
                   fontWeight: 'bold',
@@ -42,13 +55,11 @@ const Home = () => {
                   }
                 }}
               >
-                {text}
+                {btn.label}
               </Button>
             ))}
           </Stack>
-
           <Box component="img" src={bestImage} alt="Best Machine" sx={{ mt: 5, width: '100%', borderRadius: 2 }} />
-
           <Typography variant="h5" mt={4} align="center" fontWeight="bold">
             A Wide range of Medical & Aesthetic Machines
           </Typography>
@@ -196,9 +207,17 @@ const Home = () => {
             </Box>
 
             <Box display="flex" flexDirection="column" gap={1}>
-              {links.map((label, index) => (
-                <Button key={index} sx={{ color: '#c59d33', fontSize: '17px', fontWeight: 'bold', textTransform: 'none', '&:hover': { color: '#c59d33' } }}>
-                  {label}
+              {links.map((link, index) => (
+                <Button
+                  key={index}
+                  href={link.path}
+                  sx={{
+                    color: '#c59d33',
+                    fontSize: '17px', fontWeight: 'bold',
+                    textTransform: 'none',
+                    '&:hover': { color: '#c59d33' }
+                  }}>
+                  {link.label}
                 </Button>
               ))}
             </Box>
