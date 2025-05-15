@@ -213,7 +213,7 @@ const Machines = () => {
         { label: "Blog", path: '/blog' }
     ];
     return (
-        <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
+        <Box sx={{  backgroundColor: '#1a1302', color: '#fff', py: 5 }}>
             <Typography variant="h3" sx={{ textAlign: 'center', color: '#e4b946', mb: 5 }}>
                 Machines
             </Typography>

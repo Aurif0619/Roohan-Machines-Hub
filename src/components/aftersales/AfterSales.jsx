@@ -35,7 +35,7 @@ const links = [
 const AfterSales = () => {
     return (
         <>
-            <Box sx={{ backgroundColor: '#727272', color: '#fff', py: 5 }}>
+            <Box sx={{ backgroundColor: '#1a1302', color: '#fff', py: 5 }}>
                 <Container>
                     <Typography variant="h3" sx={{ textAlign: 'center', mb: 5, color: '#c59d33' }}>
                         Machines
@@ -131,7 +131,7 @@ const AfterSales = () => {
                 </Container>
             </Box>
             {/* Footer */}
-            <Box sx={{ backgroundColor: '#000'}}>
+            <Box sx={{ backgroundColor: '#000' }}>
                 <Container>
                     <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} paddingTop={3} justifyContent="space-between" alignItems="center" gap={4}>
                         <Box textAlign="center">

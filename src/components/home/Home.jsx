@@ -27,7 +27,7 @@ const Home = () => {
   ];
   return (
     <>
-      <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
+      <Box sx={{  backgroundColor: '#1a1302', color: '#fff', py: 5 }}>
         <Container maxWidth="md">
           <Typography variant="h5" align="center" fontWeight="bold" marginTop={2}>
             Looking for an aesthetic laser machine or energy device for your skin clinic, aesthetic center, spa or salon? Just keep scrolling

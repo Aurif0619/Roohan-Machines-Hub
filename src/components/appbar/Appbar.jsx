@@ -20,7 +20,6 @@ const navPaths = {
   'Blog': '/blog',
 };
 
-
 function Appbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -33,6 +32,32 @@ function Appbar(props) {
   const handleNavClick = (item) => {
     navigate(navPaths[item]);
     setMobileOpen(false);
+  };
+
+  const navLinkStyles = {
+    textTransform: 'none',
+    fontWeight: 600,
+    fontSize: '1rem',
+    color: '#c59d33',
+    transition: 'all 0.3s ease-in-out',
+    position: 'relative',
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: 0,
+      height: '2px',
+      backgroundColor: '#e4b946',
+      transition: 'width 0.3s ease',
+    },
+    '&:hover::after': {
+      width: '100%',
+    },
+    '&:hover': {
+      color: '#e4b946',
+      transform: 'scale(1.05)',
+    }
   };
 
   const drawer = (
@@ -49,8 +74,7 @@ function Appbar(props) {
         <Box sx={{ p: 2 }}>
           <img
             src={logo}
-            width={45}
-            alt="logo"
+            width={45} alt="logo"
             style={{ borderRadius: '50%', cursor: 'pointer' }}
             onClick={() => navigate('/')}
           />
@@ -61,28 +85,7 @@ function Appbar(props) {
             <Button
               key={item}
               onClick={() => handleNavClick(item)}
-              sx={{
-                textTransform: 'none',
-                fontWeight: 600, fontSize: '1rem',
-                background: 'linear-gradient(90deg, #ff512f, #dd2476)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                transition: 'all 0.3s ease-in-out',
-                position: 'relative',
-                '&::after': {
-                  content: '""', position: 'absolute',
-                  bottom: 0, left: 0,
-                  width: 0, height: '2px',
-                  backgroundColor: '#dd2476',
-                  transition: 'width 0.3s ease',
-                },
-                '&:hover::after': {
-                  width: '100%',
-                },
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                }
-              }}
+              sx={navLinkStyles}
             >
               {item}
             </Button>
@@ -116,12 +119,11 @@ function Appbar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav" position="fixed" sx={{ backgroundColor: '#000', py: '8px' }}>
+      <AppBar component="nav" position="fixed" sx={{ backgroundColor: '#1a1302', py: '8px' }}>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <img
-              src={logo}
-              width={45}
+              src={logo} width={45}
               alt="logo"
               style={{ borderRadius: '50%', cursor: 'pointer' }}
               onClick={() => navigate('/')}
@@ -140,32 +142,7 @@ function Appbar(props) {
               <Button
                 key={item}
                 onClick={() => handleNavClick(item)}
-                sx={{
-                  textTransform: 'none',
-                  fontWeight: 600,
-                  fontSize: '1rem',
-                  background: 'linear-gradient(90deg, #ff512f, #dd2476)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  transition: 'all 0.3s ease-in-out',
-                  position: 'relative',
-                  '&::after': {
-                    content: '""',
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    width: 0,
-                    height: '2px',
-                    backgroundColor: '#dd2476',
-                    transition: 'width 0.3s ease',
-                  },
-                  '&:hover::after': {
-                    width: '100%',
-                  },
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                  }
-                }}
+                sx={navLinkStyles}
               >
                 {item}
               </Button>

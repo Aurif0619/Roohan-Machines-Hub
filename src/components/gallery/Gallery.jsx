@@ -131,7 +131,7 @@ const Gallery = () => {
     ];
     return (
         <>
-            <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
+            <Box sx={{  backgroundColor: '#1a1302', color: '#fff', py: 5 }}>
                 <Grid container spacing={4} justifyContent="center">
                     {clients.map((person, index) => (
                         <Grid item key={index}>

@@ -20,7 +20,7 @@ const Aesthetic = () => {
     ];
     return (
         <>
-            <Box sx={{ backgroundColor: '#727272', color: '#fff', py: 5 }}>
+            <Box sx={{ backgroundColor: '#1a1302', color: '#fff', py: 5 }}>
                 <Container>
                     <Typography variant="h3" sx={{ textAlign: 'center', mb: 5, color: '#c59d33' }}>
                         Let's Talk Aesthetics

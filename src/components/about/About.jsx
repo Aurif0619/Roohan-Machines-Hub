@@ -51,7 +51,7 @@ const About = () => {
     ];
     return (
         <>
-            <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
+            <Box sx={{ backgroundColor: '#1a1302', color: '#fff', py: 5 }}>
                 <Typography variant="h3" sx={{ textAlign: 'center', mb: 5, color: '#c59d33' }}>
                     GET TO KNOW US!
                 </Typography>

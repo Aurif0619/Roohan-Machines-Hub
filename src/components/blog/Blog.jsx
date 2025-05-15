@@ -55,7 +55,7 @@ This machine essentially uses 1064nm laser to target the hair follicle. Often in
   ];
   return (
     <>
-      <Box sx={{ backgroundColor: '#000', color: '#fff', py: 5 }}>
+      <Box sx={{ backgroundColor: '#1a1302', color: '#fff', py: 5 }}>
         <Container
           sx={{
             mt: 4,
