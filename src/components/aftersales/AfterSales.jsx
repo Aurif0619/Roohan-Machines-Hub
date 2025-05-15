@@ -131,7 +131,7 @@ const AfterSales = () => {
                 </Container>
             </Box>
             {/* Footer */}
-            <Box sx={{ backgroundColor: '#000' }}>
+            <Box sx={{ backgroundColor: '#1a1302' }}>
                 <Container>
                     <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} paddingTop={3} justifyContent="space-between" alignItems="center" gap={4}>
                         <Box textAlign="center">

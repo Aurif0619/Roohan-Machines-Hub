@@ -69,17 +69,17 @@ const Machines = () => {
             description: 'Ideal for skin resurfacing and acne scar treatment.'
         },
         {
-            title: 'POISE+ 9-in-1 hydrafacial machine',
+            title: 'POISE+ 9-in-1 hydrafacial....',
             image: Poise,
             description: 'Multifunctional hydrafacial machine with 9 treatment features.'
         },
         {
-            title: 'LEVO 7D High Intensity Focused',
+            title: 'LEVO 7D High Intensity Focus...',
             image: Levo,
             description: 'High-intensity facial lifting and tightening technology.'
         },
         {
-            title: 'LEVO 4D High Intensity Focused',
+            title: 'LEVO 4D High Intensity...',
             image: Untrasound,
             description: 'Focused ultrasound for non-invasive skin lifting.'
         },
@@ -89,7 +89,7 @@ const Machines = () => {
             description: 'Breaks down pigment into smaller particles for faster removal.'
         },
         {
-            title: 'Microneedle RF (with/without vacuum)',
+            title: 'Microneedle RF (with/without...)',
             image: Microneedle,
             description: 'Combines microneedling and RF for deeper collagen stimulation.'
         },
@@ -114,7 +114,7 @@ const Machines = () => {
             description: 'Effective in treating pigmentation and vascular lesions.'
         },
         {
-            title: 'Q-Switched Nd-YAG (Vertical/Portable)',
+            title: 'Q-Switched Nd-YAG (Vertical)',
             image: QSwitch,
             description: 'Compact Q-switched laser for tattoos and skin pigmentation.'
         },
@@ -169,7 +169,7 @@ const Machines = () => {
             description: 'Professional microneedling pen for skin rejuvenation.'
         },
         {
-            title: 'Capsogen Kit for Oxygeneo Facial',
+            title: 'Capsogen Kit for Oxygeneo...',
             image: Capsogen,
             description: 'Used for oxygenating facials and skin brightening.'
         },

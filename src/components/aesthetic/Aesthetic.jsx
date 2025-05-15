@@ -86,7 +86,7 @@ const Aesthetic = () => {
                     </Grid>
                 </Box>
             </Box>
-            <Box sx={{ backgroundColor: '#000', color: '#fff' }}>
+            <Box sx={{ backgroundColor: '#1a1302', color: '#fff' }}>
                 <Container>
                     <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} paddingTop={3} justifyContent="space-between" alignItems="center" gap={4}>
                         <Box textAlign="center">
